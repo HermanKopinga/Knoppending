@@ -1,3 +1,5 @@
+
+#include <avr/eeprom.h>
 #include <Bounce.h>
 
 
@@ -8,7 +10,7 @@ Bounce button4 = Bounce(11, 50);
 Bounce button5 = Bounce(10, 50);  
 
 unsigned long  timeOfPress = 0;
-int mode = 1;
+byte mode = 1;
 
 void setup() {
   // Configure the pins for input mode with pullup resistors.
@@ -22,6 +24,8 @@ void setup() {
   pinMode(A2, INPUT_PULLUP);
   pinMode(11, INPUT_PULLUP);
   pinMode(10, INPUT_PULLUP);
+
+  eeprom_read_block((void*)&mode, (void*)0, sizeof(mode));
   
   Serial.begin (115200);
   Keyboard.begin();
@@ -36,6 +40,7 @@ void loop() {
     else if (button1.risingEdge()) {
       if (millis() - timeOfPress > 2000) {
         mode = 1;
+        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));
         Serial.println("Mode is nu 1");
       }
       switch (mode) {
@@ -47,10 +52,13 @@ void loop() {
           Keyboard.releaseAll();
           break;
         case 2:
-          //code
+          Keyboard.press(KEY_LEFT_GUI);
+          Keyboard.press(KEY_BACKSPACE);
+          delay(10);            
+          Keyboard.releaseAll();
           break;
         case 3:
-          //code
+          Keyboard.print("demo, 1");
           break;
         case 4:          
           //code
@@ -68,6 +76,7 @@ void loop() {
     else if (button2.risingEdge()) {
       if (millis() - timeOfPress > 2000) {
         mode = 2;
+        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
         Serial.println("Mode is nu 2");        
       }
       switch (mode) {
@@ -79,10 +88,12 @@ void loop() {
           Keyboard.releaseAll();
           break;
         case 2:
-          //code
+          Keyboard.press(KEY_BACKSPACE);
+          delay(10);
+          Keyboard.releaseAll();
           break;
         case 3:
-          //code
+          Keyboard.print("demo, 2");
           break;
         case 4:          
           //code
@@ -100,6 +111,7 @@ void loop() {
     else if (button3.risingEdge()) {
       if (millis() - timeOfPress > 2000) {
         mode = 3;
+        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));
         Serial.println("Mode is nu 3");        
       }
       switch (mode) {
@@ -111,7 +123,11 @@ void loop() {
           Keyboard.releaseAll();
           break;
         case 2:
-          // code
+          Keyboard.press(KEY_LEFT_GUI);
+          Keyboard.press(KEY_LEFT_SHIFT);
+          Keyboard.press('r');
+          delay(10);
+          Keyboard.releaseAll();          
           break;
         case 3:
           //code
@@ -132,6 +148,7 @@ void loop() {
     else if (button4.risingEdge()) {
       if (millis() - timeOfPress > 2000) {
         mode = 4;
+        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
         Serial.println("Mode is nu 4");        
       }
       switch (mode) {
@@ -167,6 +184,7 @@ void loop() {
           Keyboard.print("Hoi!\n\nDit wordt de handleiding van het knoppending. Veel plezier!\n\nHerman\nherman@kopinga.nl");
         }
         mode = 5;
+        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
         Serial.println("Mode is nu 5");        
       }
       switch (mode) {
@@ -177,7 +195,11 @@ void loop() {
           Keyboard.releaseAll();
           break;
         case 2:
-          //code
+          Keyboard.press(KEY_LEFT_CTRL);
+          Keyboard.press(KEY_LEFT_SHIFT);
+          Keyboard.press('a');
+          delay(10);
+          Keyboard.releaseAll();          
           break;
         case 3:
           //code
