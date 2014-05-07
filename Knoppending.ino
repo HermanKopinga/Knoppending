@@ -61,7 +61,10 @@ void loop() {
           Keyboard.print("demo, 1");
           break;
         case 4:          
-          //code
+          Keyboard.press(KEY_LEFT_GUI);        
+          Keyboard.press('q');
+          delay(10);            
+          Keyboard.releaseAll();          
           break;
         case 5:          
           //code
@@ -96,7 +99,10 @@ void loop() {
           Keyboard.print("demo, 2");
           break;
         case 4:          
-          //code
+          Keyboard.press(KEY_LEFT_GUI);        
+          Keyboard.press('s');
+          delay(10);            
+          Keyboard.releaseAll();          
           break;
         case 5:          
           //code
@@ -133,7 +139,10 @@ void loop() {
           //code
           break;
         case 4:          
-          //code
+          Keyboard.press(KEY_LEFT_GUI);        
+          Keyboard.press(KEY_TAB);
+          delay(10);            
+          Keyboard.releaseAll();          
           break;
         case 5:          
           //code
@@ -163,10 +172,14 @@ void loop() {
           //code
           break;
         case 3:
-          //code
+          Keyboard.print("demo, 4");
           break;
         case 4:          
-          //code
+          Keyboard.press(KEY_LEFT_GUI);        
+          Keyboard.press(KEY_LEFT_SHIFT);
+          Keyboard.press(KEY_TAB);
+          delay(10);            
+          Keyboard.releaseAll();  
           break;
         case 5:          
           //code
@@ -202,10 +215,13 @@ void loop() {
           Keyboard.releaseAll();          
           break;
         case 3:
-          //code
+          Keyboard.print("demo, 5");
           break;
         case 4:          
-          //code
+          Keyboard.press(KEY_LEFT_GUI);        
+          Keyboard.press('`');
+          delay(10);            
+          Keyboard.releaseAll();  
           break;
         case 5:          
           //code
