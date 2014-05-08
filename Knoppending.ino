@@ -68,7 +68,11 @@ void loop() {
             Keyboard.releaseAll();          
             break;
           case 5:          
-            //code
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_LEFT_SHIFT);            
+            Keyboard.press('a');
+            delay(10);            
+            Keyboard.releaseAll();  
             break;        
         }
       }
@@ -108,7 +112,11 @@ void loop() {
             Keyboard.releaseAll();          
             break;
           case 5:          
-            //code
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_LEFT_CTRL);            
+            Keyboard.press('e');
+            delay(10);            
+            Keyboard.releaseAll();  
             break;        
         }
       }
@@ -150,7 +158,16 @@ void loop() {
             Keyboard.releaseAll();          
             break;
           case 5:          
-            //code
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press('c');
+            delay(10);            
+            Keyboard.releaseAll();  
+            delay(100);
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press('v');
+            delay(10);            
+            Keyboard.releaseAll();              
             break;        
         }
       }
@@ -235,12 +252,16 @@ void loop() {
             Keyboard.releaseAll();  
             break;
           case 5:          
-            //code
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_LEFT_ALT);
+            Keyboard.press(KEY_LEFT_CTRL);            
+            Keyboard.press('n');
+            delay(10);            
+            Keyboard.releaseAll();  
             break;        
         }
       }
     }    
   }
 }
-
 
