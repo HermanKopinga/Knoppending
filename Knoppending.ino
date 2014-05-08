@@ -43,32 +43,34 @@ void loop() {
         eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));
         Serial.println("Mode is nu 1");
       }
-      switch (mode) {
-        case 1: 
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press('2');
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 2:
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press(KEY_BACKSPACE);
-          delay(10);            
-          Keyboard.releaseAll();
-          break;
-        case 3:
-          Keyboard.print("demo, 1");
-          break;
-        case 4:          
-          Keyboard.press(KEY_LEFT_GUI);        
-          Keyboard.press('q');
-          delay(10);            
-          Keyboard.releaseAll();          
-          break;
-        case 5:          
-          //code
-          break;        
+      else {
+        switch (mode) {
+          case 1: 
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press('2');
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 2:
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_BACKSPACE);
+            delay(10);            
+            Keyboard.releaseAll();
+            break;
+          case 3:
+            Keyboard.print("demo, 1");
+            break;
+          case 4:          
+            Keyboard.press(KEY_LEFT_GUI);        
+            Keyboard.press('q');
+            delay(10);            
+            Keyboard.releaseAll();          
+            break;
+          case 5:          
+            //code
+            break;        
+        }
       }
     }
   }
@@ -82,31 +84,33 @@ void loop() {
         eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
         Serial.println("Mode is nu 2");        
       }
-      switch (mode) {
-        case 1: 
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press('3');
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 2:
-          Keyboard.press(KEY_BACKSPACE);
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 3:
-          Keyboard.print("demo, 2");
-          break;
-        case 4:          
-          Keyboard.press(KEY_LEFT_GUI);        
-          Keyboard.press('s');
-          delay(10);            
-          Keyboard.releaseAll();          
-          break;
-        case 5:          
-          //code
-          break;        
+      else {
+        switch (mode) {
+          case 1: 
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press('3');
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 2:
+            Keyboard.press(KEY_BACKSPACE);
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 3:
+            Keyboard.print("demo, 2");
+            break;
+          case 4:          
+            Keyboard.press(KEY_LEFT_GUI);        
+            Keyboard.press('s');
+            delay(10);            
+            Keyboard.releaseAll();          
+            break;
+          case 5:          
+            //code
+            break;        
+        }
       }
     }    
   }
@@ -120,33 +124,35 @@ void loop() {
         eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));
         Serial.println("Mode is nu 3");        
       }
-      switch (mode) {
-        case 1: 
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press('4');
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 2:
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press(KEY_LEFT_SHIFT);
-          Keyboard.press('r');
-          delay(10);
-          Keyboard.releaseAll();          
-          break;
-        case 3:
-          //code
-          break;
-        case 4:          
-          Keyboard.press(KEY_LEFT_GUI);        
-          Keyboard.press(KEY_TAB);
-          delay(10);            
-          Keyboard.releaseAll();          
-          break;
-        case 5:          
-          //code
-          break;        
+      else {
+        switch (mode) {
+          case 1: 
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press('4');
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 2:
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press(KEY_LEFT_SHIFT);
+            Keyboard.press('r');
+            delay(10);
+            Keyboard.releaseAll();          
+            break;
+          case 3:
+            Keyboard.print("demo, 3");
+            break;
+          case 4:          
+            Keyboard.press(KEY_LEFT_GUI);        
+            Keyboard.press(KEY_TAB);
+            delay(10);            
+            Keyboard.releaseAll();          
+            break;
+          case 5:          
+            //code
+            break;        
+        }
       }
     }    
   }
@@ -160,30 +166,32 @@ void loop() {
         eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
         Serial.println("Mode is nu 4");        
       }
-      switch (mode) {
-        case 1: 
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.press('5');
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 2:
-          //code
-          break;
-        case 3:
-          Keyboard.print("demo, 4");
-          break;
-        case 4:          
-          Keyboard.press(KEY_LEFT_GUI);        
-          Keyboard.press(KEY_LEFT_SHIFT);
-          Keyboard.press(KEY_TAB);
-          delay(10);            
-          Keyboard.releaseAll();  
-          break;
-        case 5:          
-          //code
-          break;        
+      else {
+        switch (mode) {
+          case 1: 
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.press('5');
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 2:
+            //code
+            break;
+          case 3:
+            Keyboard.print("demo, 4");
+            break;
+          case 4:          
+            Keyboard.press(KEY_LEFT_GUI);        
+            Keyboard.press(KEY_LEFT_SHIFT);
+            Keyboard.press(KEY_TAB);
+            delay(10);            
+            Keyboard.releaseAll();  
+            break;
+          case 5:          
+            //code
+            break;     
+        }   
       }
     }    
   }
@@ -196,40 +204,43 @@ void loop() {
         if (millis() - timeOfPress > 10000) {
           Keyboard.print("Hoi!\n\nDit wordt de handleiding van het knoppending. Veel plezier!\n\nHerman\nherman@kopinga.nl");
         }
-        mode = 5;
-        eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
-        Serial.println("Mode is nu 5");        
+        else {
+          mode = 5;
+          eeprom_write_block((const void*)&mode, (void*)0, sizeof(mode));        
+          Serial.println("Mode is nu 5");        
+        }
       }
-      switch (mode) {
-        case 1: 
-          Keyboard.press(KEY_LEFT_GUI);
-          Keyboard.write('z');
-          delay(10);
-          Keyboard.releaseAll();
-          break;
-        case 2:
-          Keyboard.press(KEY_LEFT_CTRL);
-          Keyboard.press(KEY_LEFT_SHIFT);
-          Keyboard.press('a');
-          delay(10);
-          Keyboard.releaseAll();          
-          break;
-        case 3:
-          Keyboard.print("demo, 5");
-          break;
-        case 4:          
-          Keyboard.press(KEY_LEFT_GUI);        
-          Keyboard.press('`');
-          delay(10);            
-          Keyboard.releaseAll();  
-          break;
-        case 5:          
-          //code
-          break;        
+      else {
+        switch (mode) {
+          case 1: 
+            Keyboard.press(KEY_LEFT_GUI);
+            Keyboard.write('z');
+            delay(10);
+            Keyboard.releaseAll();
+            break;
+          case 2:
+            Keyboard.press(KEY_LEFT_CTRL);
+            Keyboard.press(KEY_LEFT_SHIFT);
+            Keyboard.press('a');
+            delay(10);
+            Keyboard.releaseAll();          
+            break;
+          case 3:
+            Keyboard.print("demo, 5");
+            break;
+          case 4:          
+            Keyboard.press(KEY_LEFT_GUI);        
+            Keyboard.press('`');
+            delay(10);            
+            Keyboard.releaseAll();  
+            break;
+          case 5:          
+            //code
+            break;        
+        }
       }
     }    
   }
-
 }
 
 
